@@ -2,6 +2,8 @@ package fr.lannier.iem.myapp.manager;
 
 import java.util.Random;
 
+import fr.lannier.iem.myapp.devices.Device;
+
 /**
  * Created by iem on 20/10/2017.
  */
@@ -11,22 +13,32 @@ public class BLEManager {
     private BLEManager() {
     }
 
-    private static BLEManager INSTANCE = new BLEManager();
+    private static BLEManager instance;
+
+    private Device device;
+
+    public void connect(Device device){
+        this.device=device;
+    }
 
     public static BLEManager getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new BLEManager();
+        if (instance == null) {
+            instance = new BLEManager();
         }
-        return INSTANCE;
+        return instance;
     }
 
-    public static String isConnected(){
-        return "Device paired";
+    public String getDeviceName(){
+        return this.device.getDeviceName();
     }
 
-    public static int getRate(){
-        Random r=new Random();
-        return r.nextInt(20)+65;
+    public String getHeartRate(){
+        if (this.device!=null){
+            return String.valueOf(this.device.getHeartRate());
+        }
+        else{
+            return "No device detected";
+        }
     }
 
 }

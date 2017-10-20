@@ -11,22 +11,22 @@ import fr.lannier.iem.myapp.manager.BLEManager;
 
 public class DetailActivity extends AppCompatActivity {
 
-    private Button rate;
-    private TextView value;
+    private Button button_rate;
+    private TextView textView_rateValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        value=(TextView) findViewById(R.id.rateValue);
+        textView_rateValue=(TextView) findViewById(R.id.detail_rate_value);
 
-        rate=(Button) findViewById(R.id.rateButton);
-        rate.setOnClickListener(new View.OnClickListener() {
+        button_rate=(Button) findViewById(R.id.detail_rate_button);
+        button_rate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BLEManager manager=BLEManager.getInstance();
-                value.setText(String.valueOf(manager.getRate()));
+                BLEManager manager = BLEManager.getInstance();
+                textView_rateValue.setText(manager.getHeartRate());
             }
         });
     }

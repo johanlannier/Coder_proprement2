@@ -8,18 +8,20 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/main_connect_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connect"
-        android:id="@+id/connectButton"/>
+        android:text="@string/connect" />
     <TextView
+        android:id="@+id/main_connect_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/connectValue"/>
+        tools:text="TextView"/>
     <Button
+        android:id="@+id/main_detail_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Detail"
-        android:id="@+id/detailButton"/>
+        android:text="@string/detail"
+        />
 
 </LinearLayout>

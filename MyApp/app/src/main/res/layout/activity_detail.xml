@@ -8,13 +8,14 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/detail_rate_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rate"
-        android:id="@+id/rateButton"/>
+        android:text="@string/rate"/>
     <TextView
+        android:id="@+id/detail_rate_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/rateValue"/>
+        tools:text="TextView"/>
 
 </LinearLayout>
