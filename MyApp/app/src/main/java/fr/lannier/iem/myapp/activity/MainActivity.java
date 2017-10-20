@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 BLEManager manager=BLEManager.getInstance();
                 manager.connect(new Device());
-                textView_status.setText(manager.getDeviceName()+" connected");
+                textView_status.setText(manager.getDeviceName()+" paired");
             }
         });
     }

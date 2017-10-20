@@ -34,7 +34,7 @@ public class BLEManager {
 
     public String getHeartRate(){
         if (this.device!=null){
-            return String.valueOf(this.device.getHeartRate());
+            return String.valueOf(device.getHeartRate());
         }
         else{
             return "No device detected";

@@ -3,5 +3,6 @@
     <string name="detail">Detail</string>
     <string name="connect">Connect</string>
     <string name="rate">Rate</string>
+    <string name="nodevice">No device paired</string>
 
 </resources>
