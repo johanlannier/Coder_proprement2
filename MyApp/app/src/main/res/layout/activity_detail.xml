@@ -10,16 +10,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connect"
-        android:id="@+id/connectButton"/>
+        android:text="Rate"
+        android:id="@+id/rateButton"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/connectValue"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Detail"
-        android:id="@+id/detailButton"/>
+        android:id="@+id/rateValue"/>
 
 </LinearLayout>
