@@ -14,6 +14,9 @@ import fr.lannier.iem.myapp.manager.BLEManager;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Renommer une variable: maj + F6
+    //Renommer une méthode: cmd + F6
+
     private Button button_detail;
     private Button button_connect;
     private TextView textView_status;
