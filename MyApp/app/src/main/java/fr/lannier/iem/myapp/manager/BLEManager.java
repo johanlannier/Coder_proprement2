@@ -1,8 +1,6 @@
 package fr.lannier.iem.myapp.manager;
 
-import java.util.Random;
-
-import fr.lannier.iem.myapp.devices.Device;
+import fr.lannier.iem.myapp.devices.MockBLEDevice;
 
 /**
  * Created by iem on 20/10/2017.
@@ -15,9 +13,9 @@ public class BLEManager {
 
     private static BLEManager instance;
 
-    private Device device;
+    private BLEDevice device;
 
-    public void connect(Device device){
+    public void pairDevice(BLEDevice device){
         this.device=device;
     }
 

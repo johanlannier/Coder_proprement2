@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import fr.lannier.iem.myapp.IEMApplication;
 import fr.lannier.iem.myapp.R;
 import fr.lannier.iem.myapp.devices.Device;
 import fr.lannier.iem.myapp.manager.BLEManager;
@@ -16,12 +17,13 @@ public class MainActivity extends AppCompatActivity {
     private Button button_detail;
     private Button button_connect;
     private TextView textView_status;
+    private BLEManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        manager=IEMApplication.application().getBleManager();
         initView();
 
     }
@@ -42,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
         button_connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BLEManager manager=BLEManager.getInstance();
-                manager.connect(new Device());
+                manager.pairDevice(new Device());
                 textView_status.setText(manager.getDeviceName()+" paired");
             }
         });
